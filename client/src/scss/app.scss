@@ -1,0 +1,22 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.discount {
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    width: 0;
+    height: 0;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
+    border-top: 12px solid #ef4444;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
