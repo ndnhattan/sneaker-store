@@ -8,13 +8,15 @@ const initRoutes = require("./src/routes");
 const app = express();
 const port = process.env.PORT || 7000;
 
-app.use(
-  cors({
-    origin: "*",
-    headers: ["Content-Type"],
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: ["*"], // List of allowed origins
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  optionsSuccessStatus: 204, // No Content
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true, // Allow cookies and HTTP authentication
+};
+
+app.use(cors(corsOptions));
 
 app.use(cookieParser());
 app.use(express.json());
