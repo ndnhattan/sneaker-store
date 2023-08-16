@@ -10,7 +10,7 @@ const port = process.env.PORT || 7000;
 
 app.use(
   cors({
-    origin: "https://sneaker-store-two.vercel.app",
+    origin: "*",
     headers: ["Content-Type"],
     credentials: true,
   })
