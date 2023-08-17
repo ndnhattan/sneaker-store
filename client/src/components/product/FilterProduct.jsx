@@ -37,7 +37,9 @@ const FilterProduct = ({ filter, setFilter, outlet, mobile, handleClick }) => {
             <span>
               {filter.sort === "salePrice"
                 ? "Giá: thấp -> cao"
-                : "Giá: cao -> thấp"}
+                : filter.sort === "-salePrice"
+                ? "Giá: cao -> thấp"
+                : "Bán chạy nhất"}
             </span>
           </div>
         )}
